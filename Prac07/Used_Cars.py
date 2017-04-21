@@ -1,8 +1,8 @@
-from Prac07.cars import Cars
+from Prac07 import Cars
 
 
 def main():
-    bus = Cars("Bus", 180)
+    bus = Cars(180)
     bus.drive(30)
     print("fuel =", bus.fuel)
     print("odo =", bus.odometer)
@@ -11,11 +11,11 @@ def main():
     print("Car {}, {}".format(bus.fuel, bus.odometer))
     print("{self.name}, {self.fuel}, {self.odometer}".format(self=bus))
 
-    limo = Cars("Limo", 100)
-    limo.add_fuel(20)
-    print("fuel = ", limo.fuel)
+    limo = Cars(100)
+
+    bus.add_fuel(20)
+    print("fuel = ", bus.fuel)
     limo.drive(115)
+    print("odo =", bus.odometer)
     print("{self.name}, {self.fuel}, {self.odometer}".format(self=limo))
-
-
 main()
